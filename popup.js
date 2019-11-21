@@ -7,11 +7,16 @@ document.addEventListener('DOMContentLoaded', function(){
 		document.getElementById("searchIs").addEventListener("click", function(){
 			chrome.tabs.create({url: "http://archive.today/"+tab.url});
 		});
+
 		document.getElementById("archiveOrg").addEventListener("click", function(){
 			chrome.tabs.create({url: "https://web.archive.org/save/"+tab.url});
 		});
 		document.getElementById("searchOrg").addEventListener("click", function(){
 			chrome.tabs.create({url: "https://web.archive.org/web/*/"+tab.url});
+		});
+
+		document.getElementById("gc").addEventListener("click", function(){
+			chrome.tabs.create({url: "https://webcache.googleusercontent.com/search?q=cache:"+tab.url});
 		});
 	});
 
